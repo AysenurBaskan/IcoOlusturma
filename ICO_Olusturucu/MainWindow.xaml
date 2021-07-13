@@ -1,0 +1,26 @@
+﻿<Window x:Class="ICO_Olusturucu.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ICO_Olusturucu"
+        xmlns:xctk="http://schemas/xceed.com/wpf/xaml/toolkit" xmlns:xctk1="http://schemas.xceed.com/wpf/xaml/toolkit"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="149.175" Width="398" Loaded="Window_Loaded">
+    <Grid>
+        <xctk1:ColorPicker Name="cp" DisplayColorAndName="True" SelectedColorChanged="cp_SelectedColorChanged_1" AvailableColorsSortingMode="HueSaturationBrightness" Height="26" VerticalAlignment="Top" Margin="225,10,10,0" />
+        <Label x:Name="label" Content="Renk:" HorizontalAlignment="Left" Margin="102,10,0,0" VerticalAlignment="Top" Height="33" Width="108"/>
+        <Button x:Name="button" Content="ICO Olarak Aktar" HorizontalAlignment="Left" Margin="109,76,0,0" VerticalAlignment="Top" Width="262" Click="button_Click"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="96" Margin="-3,0,0,0" VerticalAlignment="Top" Width="96">
+            <Canvas x:Name="ico" HorizontalAlignment="Left" Height="96" VerticalAlignment="Top" Width="96" MouseDown="Canvas_MouseDown" MouseMove="ico_MouseMove" Margin="-1,-1,0,0">
+                <Canvas.Background>
+                    <SolidColorBrush Color="White" Opacity="0"/>
+                </Canvas.Background>
+            </Canvas>
+        </Border>
+        <RadioButton x:Name="radioKalem" Content="Kalem" HorizontalAlignment="Left" Margin="109,48,0,0" VerticalAlignment="Top" IsChecked="True"/>
+        <RadioButton x:Name="radioSilgi" Content="Silgi" HorizontalAlignment="Left" Margin="176,48,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cbBoyut" HorizontalAlignment="Left" Margin="305,41,0,0" VerticalAlignment="Top" Width="66" Height="33"/>
+        <Label x:Name="label_Copy" Content="Boyut:" HorizontalAlignment="Left" Margin="234,41,0,0" VerticalAlignment="Top" Height="33" Width="71"/>
+    </Grid>
+</Window>
